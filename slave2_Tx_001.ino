@@ -39,7 +39,7 @@ void send(){
 	static byte index = 0xFF;
 	static unsigned long lastSend;
 	unsigned long topLoop = millis();
-	if(topLoop - lastSend >= 5000){
+	if(topLoop - lastSend >= 10000){
 		lastSend = topLoop;
 		//if(++index > 4){
 		index = 0;
