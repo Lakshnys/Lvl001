@@ -38,7 +38,7 @@ void send(){
 	static byte index = 0xFF;
 	static unsigned long lastSend;
 	unsigned long topLoop = millis();
-	if(topLoop - lastSend >= 10000){
+	if(topLoop - lastSend >= 13000){
 		lastSend = topLoop;
 		//if(++index > 4){
 		index = 0;
@@ -76,7 +76,7 @@ void tankLevel(){
 	if(newData == true){
 		newData = false;
 				if(digitalRead(SW1) == HIGH && digitalRead(SW2) == HIGH && digitalRead(SW3) == HIGH && digitalRead(SW4) == HIGH){
-        tank1[0] = 'F'; //65 Hex
+        tank1[0] = 'A'; //65 Hex
 			 } else if(digitalRead(SW1) == LOW && digitalRead(SW2) == HIGH && digitalRead(SW3) == HIGH && digitalRead(SW4) == HIGH){
 			  tank1[0] = 'B'; //66 Hex
 		   } else if(digitalRead(SW1) == LOW && digitalRead(SW2) == LOW && digitalRead(SW3) == HIGH && digitalRead(SW4) == HIGH){
