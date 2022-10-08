@@ -14,7 +14,7 @@ int SW4 = 5;
 int LED = 7;
 
 void setup(){
-	Serial.begin(9600);
+	Serial.begin(115200);
 	radio.begin();
     //radio.setDataRate( RF24_2MBPS );
 	radio.setDataRate(RF24_1MBPS);
